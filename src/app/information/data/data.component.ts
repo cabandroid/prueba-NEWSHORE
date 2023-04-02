@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { filter } from 'rxjs';
 import { DataFlight } from 'src/app/model/data-flight';
 import { validationFields } from 'src/app/validations/different-validation';
 import { DataService } from '../services/data.service';
@@ -13,13 +12,13 @@ import { CurrencyService } from 'src/app/results/services/currency.service';
 })
 export class DataComponent implements OnInit {
 
-  formData: FormGroup;
-  origin: string = "";
-  arrival: string = "";
-  datafligths?: DataFlight[];
-  datafligthsfound?: DataFlight[];
-  fields_equals?: boolean = false;
-  flagCard: boolean = false;
+  public formData: FormGroup;
+  private origin: string = "";
+  private arrival: string = "";
+  public datafligths?: DataFlight[];
+  public datafligthsfound?: DataFlight[];
+  public fields_equals?: boolean = false;
+  public flagCard: boolean = false;
 
   constructor(
     private fb: FormBuilder,
@@ -28,7 +27,6 @@ export class DataComponent implements OnInit {
   ) {
     this.getUniqueDataFlights();
     this.formData = this.fb.group({
-      // departureStation: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(3)]),
       departureStation: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(3)]],
       arrivalStation: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(3)]],
     },{
@@ -57,7 +55,7 @@ export class DataComponent implements OnInit {
     this.arrival = this.arrival.toUpperCase();
   }
 
-  setCurrency(symbol: string, value: number): void {
+  public setCurrency(symbol: string, value: number): void {
     this.currencyService.setCurrency(symbol, value)
   }
   

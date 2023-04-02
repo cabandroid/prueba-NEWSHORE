@@ -1,5 +1,5 @@
 export class Transport {
 
-    flightCarrier?: string;
-    flightNumber?: string;
+    public flightCarrier?: string;
+    public flightNumber?: string;
 }

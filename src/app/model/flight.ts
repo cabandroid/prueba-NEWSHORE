@@ -2,9 +2,9 @@ import { Transport } from "./transport";
 
 export class Flight {
 
-    transport?: Transport;
-    origin?: string;
-    destination?: string;
-    price?: number;
+    public transport?: Transport;
+    public origin?: string;
+    public destination?: string;
+    public price?: number;
 
 }

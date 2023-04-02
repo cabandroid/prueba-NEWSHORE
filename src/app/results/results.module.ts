@@ -4,8 +4,6 @@ import { FlightComponent } from './flight/flight.component';
 import { DivisasPipe } from '../pipes/pipe-divisas.pipe';
 import { NotFlightComponent } from './not-flight/not-flight.component';
 
-
-
 @NgModule({
   declarations: [
     FlightComponent,

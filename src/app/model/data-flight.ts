@@ -1,9 +1,9 @@
 export class DataFlight {
 
-    departureStation?: string;
-    arrivalStation?: string;
-    flightCarrier?: string;
-    flightNumber?: string;
-    price?: number;
+    public departureStation?: string;
+    public arrivalStation?: string;
+    public flightCarrier?: string;
+    public flightNumber?: string;
+    public price?: number;
    
 }

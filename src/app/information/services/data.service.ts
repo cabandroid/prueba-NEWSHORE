@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { DataFlight } from 'src/app/model/data-flight';
+import { Flight } from 'src/app/model/flight';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -25,9 +25,9 @@ export class DataService {
    */
    private url: string = `${environment.API}/flights/`;
 
-  getUniqueDataFlights(): Observable<DataFlight[]>{
+  getUniqueDataFlights(): Observable<Flight[]>{
 
-    return this.http.get<DataFlight[]>(this.url + '0');
+    return this.http.get<Flight[]>(this.url + '0');
   }
 
 }
